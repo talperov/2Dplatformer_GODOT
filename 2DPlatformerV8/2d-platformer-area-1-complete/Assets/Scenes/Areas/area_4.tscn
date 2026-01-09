@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyadpfdbwys5p"]
-
-[ext_resource type="PackedScene" uid="uid://3hodbno50wg3" path="res://Assets/Scenes/Area Functionality/area_template.tscn" id="1_kg7ce"]
-
-[node name="Area4" instance=ExtResource("1_kg7ce")]
