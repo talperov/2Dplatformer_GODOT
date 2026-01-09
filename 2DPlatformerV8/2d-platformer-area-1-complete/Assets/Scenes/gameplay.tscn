@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c320w7nu1beyu"]
+
+[ext_resource type="PackedScene" uid="uid://cbevgf8n8cxlb" path="res://Assets/Scenes/player.tscn" id="1_0ti3t"]
+[ext_resource type="PackedScene" uid="uid://be4a4sn84ad8p" path="res://Assets/UI/hud.tscn" id="1_6k5g7"]
+[ext_resource type="Script" uid="uid://de5rorqbn5urg" path="res://Assets/Scripts/gameplay.gd" id="1_j02rm"]
+
+[node name="Gameplay" type="Node2D" node_paths=PackedStringArray("current_area_container")]
+script = ExtResource("1_j02rm")
+current_area_container = NodePath("Area")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("1_6k5g7")]
+
+[node name="Player" parent="." instance=ExtResource("1_0ti3t")]
+
+[node name="Area" type="Node2D" parent="." groups=["area_container"]]
